@@ -2,6 +2,9 @@ import { useState } from "react";
 import { games, playUrl } from "./data";
 import SketchLogo from "./motion/SketchLogo";
 import { celebrate } from "./motion/motion";
+import ArcadeButton from "./whimsy/ArcadeButton";
+import CardPreview from "./whimsy/CardPreview";
+import JellyTitle from "./whimsy/JellyTitle";
 
 // start.ng's homepage (the live markup), with sample data and the motion prototype switched on.
 
@@ -27,9 +30,9 @@ export default function Home() {
       <section className="container hero">
         <SketchLogo className="hero-sketch" />
         <p className="eyebrow">Big imagination. Played everywhere.</p>
-        <h1>Good vibes.<br /><mark>Good games.</mark></h1>
+        <JellyTitle />
         <p className="lead">Games made by builders in the community.<br />Pick one and play right in your browser.</p>
-        <div className="actions"><a className="btn" href="#games">Play now</a><a className="ghost btn" href="/motion">See the motion lab</a></div>
+        <div className="actions"><ArcadeButton href="#games">Play now</ArcadeButton><a className="ghost btn" href="/motion">See the motion lab</a></div>
       </section>
 
       <section className="container">
@@ -59,7 +62,7 @@ export default function Home() {
           {games.map((g) => (
             <article key={g.slug} className={`game${g.legendary ? " legendary" : ""}`}>
               <a className="game-link" href={playUrl(g)}>
-                <div className="art" style={{ background: `linear-gradient(135deg, ${g.colors[0]}, ${g.colors[1]})` }}><img src={g.cover} alt="" loading="lazy" decoding="async" /></div>
+                <div className="art" style={{ background: `linear-gradient(135deg, ${g.colors[0]}, ${g.colors[1]})` }}><img src={g.cover} alt="" loading="lazy" decoding="async" /><CardPreview slug={g.slug} /></div>
                 <div className="info"><h3>{g.name}</h3><p>{g.slug === "hangout" ? "start.ng/hangout" : `${g.slug}.start.ng`}</p><span className="by">by {g.by} · <span className="plays">{g.plays} plays</span></span></div>
               </a>
               <div className="meta">

@@ -77,8 +77,8 @@ export function countUp(el: HTMLElement, to: number, ms = 1100, from = 0) {
   requestAnimationFrame(step);
 }
 
-/** A burst of confetti from a point (default: the upper middle of the screen), in the site's own colours. */
-export function celebrate(origin?: { x: number; y: number }, count = 150) {
+/** A burst of confetti from a point (default: the upper middle of the screen), in the site's own colours unless a palette is given. */
+export function celebrate(origin?: { x: number; y: number }, count = 150, palette?: string[]) {
   if (reducedMotion()) return;
   const canvas = document.createElement("canvas");
   canvas.setAttribute("aria-hidden", "true");
@@ -92,7 +92,7 @@ export function celebrate(origin?: { x: number; y: number }, count = 150) {
   ctx.scale(dpr, dpr);
 
   const css = getComputedStyle(document.documentElement);
-  const colors = ["--lime", "--ink", "--ok", "--r-rare", "--r-epic", "--r-legendary", "--r-limited"].map((v) => css.getPropertyValue(v).trim()).filter(Boolean);
+  const colors = palette ?? ["--lime", "--ink", "--ok", "--r-rare", "--r-epic", "--r-legendary", "--r-limited"].map((v) => css.getPropertyValue(v).trim()).filter(Boolean);
   const o = origin ?? { x: innerWidth / 2, y: innerHeight * 0.38 };
   const parts = Array.from({ length: count }, () => {
     const angle = -Math.PI / 2 + (Math.random() - 0.5) * Math.PI * 1.15;
