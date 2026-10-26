@@ -6,7 +6,8 @@ A whimsical motion layer for [start.ng](https://start.ng), shown on a front-end-
 
 ## What moves
 
-- **The hero:** the lines rise in one after another, the lime highlight sweeps under "Good games.", and a pen sketch of the start.ng logo draws itself in the corner, then floats.
+- **The hero:** the lines rise in one after another, and the lime highlight sweeps under "Good games.".
+- **Jelly letters:** the big heading is made of soft pieces. Touch a letter with your mouse and it wobbles like jelly; click it and it bounces like a ball.
 - **Game cards:** on a mouse, a card leans towards the pointer, a lime glow follows it, the picture zooms, and pressing squeezes it. Cards rise into view as you scroll to them.
 - **Small rewards:** saving a favourite sends a little burst of confetti from the heart. On `/motion`, "Unlock something" shows the full celebration: confetti in the site's own colours, a card that pops in, and numbers that count up.
 

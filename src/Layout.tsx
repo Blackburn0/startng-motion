@@ -1,5 +1,4 @@
 import { useState } from "react";
-import LogoBuddy from "./whimsy/LogoBuddy";
 
 // start.ng's header and footer (the live site's markup), with its light/dark switch. Links point at the real start.ng.
 
@@ -10,7 +9,6 @@ function ThemeToggle({ row = false }: { row?: boolean }) {
     document.documentElement.setAttribute("data-theme", next);
     try { localStorage.setItem("theme", next); } catch { /* private mode */ }
     setDark(!dark);
-    dispatchEvent(new CustomEvent("startng:theme", { detail: { dark: next === "dark" } })); // the sunset or sunrise (whimsy 5)
   };
   const label = dark ? "Light mode" : "Dark mode";
   return (
@@ -30,7 +28,7 @@ export function Header() {
     <>
       <p className="mock-ribbon">Motion prototype for start.ng · sample data · <a href="/motion">Open the motion lab</a> · <a href="/">Home</a></p>
       <header className={`container nav${open ? " menu-open" : ""}`}>
-        <a className="logo buddy" href="/"><LogoBuddy /><b>start<span>.ng</span></b></a>
+        <a className="logo" href="/"><b>start<span>.ng</span></b></a>
         <nav id="pages-menu" aria-label="Pages">
           <a href="https://start.ng/games">Games</a>
           <a href="https://start.ng/tournament">Tournament</a>

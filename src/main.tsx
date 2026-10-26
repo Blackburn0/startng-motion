@@ -7,7 +7,7 @@ import Home from "./Home";
 import { Footer, Header } from "./Layout";
 import MotionLab from "./motion/MotionLab";
 import { startMotion } from "./motion/motion";
-import Whimsy from "./whimsy/Whimsy";
+import "./whimsy/whimsy.css";
 
 startMotion();
 
@@ -16,6 +16,5 @@ createRoot(document.getElementById("root")!).render(
     <Header />
     {location.pathname.replace(/\/$/, "") === "/motion" ? <MotionLab /> : <Home />}
     <Footer />
-    <Whimsy />
   </StrictMode>,
 );
