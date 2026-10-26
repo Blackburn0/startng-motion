@@ -26,7 +26,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <p className="mock-ribbon">Motion prototype for start.ng · sample data · <a href="/motion">Open the motion lab</a> · <a href="/">Home</a></p>
+      <p className="mock-ribbon">Motion prototype for start.ng · sample data · <a href="/motion">Read the docs</a> · <a href="/">Home</a></p>
       <header className={`container nav${open ? " menu-open" : ""}`}>
         <a className="logo" href="/"><b>start<span>.ng</span></b></a>
         <nav id="pages-menu" aria-label="Pages">
@@ -57,7 +57,7 @@ export function Footer() {
           <p>Nigeria&apos;s home for browser games, made by the community and by creators across Africa.</p>
         </div>
         <nav aria-label="Play"><h2>Play</h2><ul><li><a href="https://start.ng/games">All games</a></li><li><a href="https://start.ng/tournament">Daily tournament</a></li><li><a href="https://start.ng/hangout">The Hangout</a></li></ul></nav>
-        <nav aria-label="This prototype"><h2>This prototype</h2><ul><li><a href="/motion">Motion lab</a></li><li><a href="https://github.com/Blackburn0/startng-motion">Source on GitHub</a></li></ul></nav>
+        <nav aria-label="This prototype"><h2>This prototype</h2><ul><li><a href="/motion">How it works (docs)</a></li><li><a href="https://github.com/Blackburn0/startng-motion">Source on GitHub</a></li></ul></nav>
       </div>
       <p className="site-footer-base"><span>© 2026 start.ng</span><span>A mock-up with sample data. The real site is start.ng.</span></p>
     </footer>

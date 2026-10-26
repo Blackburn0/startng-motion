@@ -28,7 +28,7 @@ export default function Home() {
         <p className="eyebrow">Big imagination. Played everywhere.</p>
         <JellyTitle />
         <p className="lead">Games made by builders in the community.<br />Pick one and play right in your browser.</p>
-        <div className="actions"><a className="btn" href="#games">Play now</a><a className="ghost btn" href="/motion">See the motion lab</a></div>
+        <div className="actions"><a className="btn" href="#games">Play now</a><a className="ghost btn" href="/motion">How it works</a></div>
       </section>
 
       <section className="container">

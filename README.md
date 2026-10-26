@@ -2,7 +2,7 @@
 
 A whimsical motion layer for [start.ng](https://start.ng), shown on a front-end-only copy of its homepage with sample data. There's no backend: the games' Play buttons open the real games on start.ng.
 
-**Live:** https://startng-motion.vercel.app (the motion lab is at `/motion`)
+**Live:** https://startng-motion.vercel.app. The documentation, with a demo video and a live example of every effect, is at [`/motion`](https://startng-motion.vercel.app/motion).
 
 ## What moves
 
@@ -22,6 +22,14 @@ A whimsical motion layer for [start.ng](https://start.ng), shown on a front-end-
 ```bash
 npm install
 npm run dev
+```
+
+## Record the demo video again
+
+`demo/record.mjs` drives Chrome through each effect, with a visible pointer and captions, and turns the recording into `public/video/demo.mp4` with ffmpeg. With the dev server running:
+
+```bash
+node demo/record.mjs http://localhost:5173 ./frames "C:/Program Files/Google/Chrome/Application/chrome.exe" ffmpeg
 ```
 
 ## About the files
