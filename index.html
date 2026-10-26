@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f5ee" />
+    <meta name="description" content="A whimsical motion prototype for start.ng: a hero that draws itself, game cards that lean towards you, and celebrations. Front end only, sample data." />
+    <title>start.ng · Motion prototype</title>
+    <script>
+      // Apply a saved theme choice before the page paints (as start.ng does), so there's no flash of the other one.
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

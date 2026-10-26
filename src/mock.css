@@ -1,0 +1,6 @@
+/* Only for this mock-up: the thin ribbon that says it's a prototype. Colours come from start.ng's own variables. */
+.mock-ribbon { margin: 0; padding: 8px 16px; text-align: center; font-family: var(--mono); font-size: .74rem; letter-spacing: .04em; background: var(--lime); color: var(--on-lime); }
+.mock-ribbon a { color: inherit; font-weight: 700; text-decoration: underline; }
+.nav-signin.btn { padding: 10px 18px; }
+/* the narrowest phones: four tournament covers instead of five, so the banner fits */
+@media (max-width: 360px) { .tournament-banner-games .art:nth-child(n + 5) { display: none; } }
